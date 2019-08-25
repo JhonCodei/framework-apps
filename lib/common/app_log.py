@@ -32,17 +32,17 @@ def get_logger(ldir,lname):
 
     log_cons = 'FALSE'
 
-    if 'LOG_NAME' in os.environ.keys(): lname = os.environ['LOG_NAME']
+    if 'LOG_NAME'  in os.environ.keys(): lname    = os.environ['LOG_NAME']
 
-    if 'LOG_DIR' in os.environ.keys(): ldir = os.environ['LOG_DIR']
+    if 'LOG_DIR'   in os.environ.keys(): ldir     = os.environ['LOG_DIR']
 
-    if 'LOG_CONS' in os.environ.keys(): log_cons = os.environ['LOG_CONS']
+    if 'LOG_CONS'  in os.environ.keys(): log_cons = os.environ['LOG_CONS']
 
     if 'LOG_LEVEL' in os.environ.keys(): ll = eval(f"logging.{os.environ['LOG_LEVEL']}")
     else                               : ll = logging.INFO
 
     logFile = os.path.join(ldir, lname)
-    logger = logging.getLogger(lname)
+    logger  = logging.getLogger(lname)
 
     logger.setLevel(ll)
 
@@ -53,5 +53,5 @@ def get_logger(ldir,lname):
 
     # with this pattern, it's rarely necessary to propagate the error up to parent
     logger.propagate = False
-    print('In get_logger, logfile = {}'.format(logFile))
+    print(f'In get_logger, logfile = {logFile}')
     return logger

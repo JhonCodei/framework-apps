@@ -1,10 +1,10 @@
-
+import email
 import smtplib, ssl
 
 
 class _EmailUtil(object):
 
-    def __init__(self, logger, sender, passwd, ls=[], text="Hola", sede="-", attachment=[], stmp_server="smtp.gmail.com", stmp_port=587, ):
+    def __init__(self, logger, sender, passwd, ls=[], text="Hola", sede="-", attachment=[], stmp_server="smtp.gmail.com", stmp_port=587 ):
 
         self.log        = logger
         self.em_smtp    = stmp_server

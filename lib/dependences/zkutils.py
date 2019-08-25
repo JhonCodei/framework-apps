@@ -1,3 +1,12 @@
+"""
+-- This Utils only use for fingerprint-devices zkteko
+
+@author: Owk'r
+
+"""
+__version__ = "20190825"
+
+
 import os
 import sys
 from zk import ZK, const
@@ -19,6 +28,7 @@ class ZKUtil(object):
         self.om_png  = False
 
     def _zk_connect(self):
+
         ret = 1
 
         try:
@@ -35,37 +45,60 @@ class ZKUtil(object):
         finally:
             return ret
 
-    def _zk_disconnect(self):
+    def _zk_is_connected(self):
+
         try:
             if self.zk_conn:
-                self.zk_conn.disconnect()
-                self.log.info(f" disconnect from fingerprint, ip => {self.zk_ip}")
+                return True
+            else:
+                self.log.error(f"zk conn is {self.zk_conn}")
+                return False
         except Exception as e:
             self.log.info(f"Except -> {e} ")
+            self.log.error(f" Except {sys.exc_info()}")
+
+    def _zk_disconnect(self):
+
+        ret = 1
+
+        try:
+            if self._zk_is_connected():
+                self.zk_conn.disconnect()
+                self.log.info(f" disconnect from fingerprint, ip => {self.zk_ip}")
+                ret = 0
+        except Exception as e:
+            self.log.info(f"Except -> {e} ")
+            self.log.error(f" Except {sys.exc_info()}")
+        finally:
+            return ret
 
     def _zk_firmware(self):
         ret = 1
 
         try:
-            ret = self.zk_conn.get_firmware_version()
+            if self._zk_is_connected():
+                ret = self.zk_conn.get_firmware_version()
         except Exception as e:
             self.log.error(f" Except error , detail -> {e}")
             self.log.error(f" Except {sys.exc_info()}")
-
-        return ret
+        finally:
+            return ret
 
     def _zk_live_attendance(self):
+
         ret = 1
 
         try:
-            ret = self.zk_conn.get_firmware_version()
+            if self._zk_is_connected():
+                ret = self.zk_conn.get_firmware_version()
         except Exception as e:
             self.log.error(f" Except error , detail -> {e}")
             self.log.error(f" Except {sys.exc_info()}")
-
-        return ret
+        finally:
+            return ret
 
     def _zk_get_attendance(self):
+
         ret = []
 
         tmp = {
@@ -77,11 +110,12 @@ class ZKUtil(object):
         }
 
         try:
-            ret = self.zk_conn.get_attendance()
+            if self._zk_is_connected():
+                ret = self.zk_conn.get_attendance()
 
-            if len(ret) == 0:
-                self.log.error(f"attendance is len = 0, {attendance}")
-                ret = 0
+                if len(ret) == 0:
+                    self.log.error(f"attendance is len = 0, {attendance}")
+
         except Exception as e:
             self.log.error(f" Except error , detail -> {e}")
             self.log.error(f" Except {sys.exc_info()}")
@@ -89,16 +123,27 @@ class ZKUtil(object):
             return ret
 
     def _zk_clear_attendance(self):
-        ret = 1
 
-        return ret
-
-    def _zk_reboot_machine(self):
         ret = 1
 
         try:
-            self.zk_conn.restart()
-            ret = 0
+            if self._zk_is_connected():
+                self.zk_conn.clear_attendance()
+                ret = 0
+        except Exception as e:
+            self.log.error(f"Except error, detail -> {e}")
+            self.log.error(f"Except {sys.exc_info()}")
+        finally:
+            return ret
+
+    def _zk_reboot_machine(self):
+
+        ret = 1
+
+        try:
+            if self._zk_is_connected():
+                self.zk_conn.restart()
+                ret = 0
         except Exception as e:
             self.log.error(f" Except error , detail -> {e}")
             self.log.error(f" Except {sys.exc_info()}")

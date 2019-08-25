@@ -114,9 +114,11 @@ def to_float_zero(s):
     except TypeError: return 0.0
 
 def is_valid_email(email):
+
+    regx = '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$'
+
     if len(email) > 7:
-        if re.match('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$', email) is not None:
-            # if re.match('(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)', email) is not None:
+        if re.match(regx, email) is not None:
             return True
     return False
 
@@ -177,7 +179,7 @@ def build_query(log, sql, target=[], vars=[]):
             rt = sql.replace(str(target[i]), str(vars[i]))
         else:
             rt = rt.replace(str(target[i]), str(vars[i]))
-        x +=1
+        x += 1
 
     return rt
 

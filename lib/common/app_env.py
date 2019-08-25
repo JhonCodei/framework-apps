@@ -23,10 +23,10 @@ def get_env_vars(e_vars, logger):
 
     for ev, v in e_vars.items():
         try:
-                print(f'---------- ev = {ev} v = {v}')
-                x = os.environ[ev]
-                exec(f"v='x'")
-                logger.debug(f"{v}='{x}'")
+            print(f'---------- ev = {ev} v = {v}')
+            x = os.environ[ev]
+            exec(f"v='x'")
+            logger.debug(f"{v}='{x}'")
 
         except:
             ret = 2

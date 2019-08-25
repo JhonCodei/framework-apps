@@ -32,13 +32,13 @@ class Email(object):
 
     def __init__(self, smcfg, logger):
 
-        self.appName = self.__class__.__name__.lower()
-        self.smtp_cfg = smcfg          # Host Configuration.
-        self.log = logger
-        self.host = smcfg['Smtp']      # Client app config. Host Name
-        self.smtp_server = None        # handler to Host (smtp)
-        self.msg = None
-        self.toaddr = []               # Hold recipients addresses.
+        self.appName     = self.__class__.__name__.lower()
+        self.smtp_cfg    = smcfg         # Host Configuration.
+        self.log         = logger
+        self.host        = smcfg['Smtp'] # Client app config. Host Name
+        self.smtp_server = None          # handler to Host (smtp)
+        self.msg         = None
+        self.toaddr      = []            # Hold recipients addresses.
 
     # ---------------------------------------  SMTP Connectivity ------------------------------------#
     # All checks STMP related variables are check in this method. No need to check in client module.
@@ -62,8 +62,8 @@ class Email(object):
 
         try:
             self.smtp_server = smtplib.SMTP(self.smtp_cfg['Stmp'],
-                                  su.to_int_zero(self.smtp_cfg['Port']),
-                                  timeout=su.to_int_zero(self.smtp_cfg['Time_Out']))
+                               su.to_int_zero(self.smtp_cfg['Port']),
+                               timeout=su.to_int_zero(self.smtp_cfg['Time_Out']))
 
             if su.to_int_zero(self.smtp_cfg['Stmp_Dbg']) == 1:
                 self.smtp_server.set_debuglevel(1)
@@ -105,14 +105,14 @@ class Email(object):
     def _set_mail_hdr(self):
 
         self.msg['Subject'] = "EO TODO Implement mechanism"
-        self.msg['From'] = self.smtp_cfg['From_Addr']
+        self.msg['From']    = self.smtp_cfg['From_Addr']
 
     # Opens a file and returns a comma(,) separated string.
     # Sets the message label if a file is present and string is not empty.
     # Checks for valid email address.
     def _set_addr(self, fn, label):
 
-        addr = []
+        addr     = []
         val_addr = []
         bad_addr = []
         if not fu.file_exists(fn):

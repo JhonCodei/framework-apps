@@ -21,10 +21,10 @@ class DBSQLLite(object):
 
     def __init__(self, cs, logger, encode=str):
         self.conn_str = cs
-        self.db_conn = None
-        self.log = logger
-        self.encode = encode
-        self.sep = ','
+        self.db_conn  = None
+        self.log      = logger
+        self.encode   = encode
+        self.sep      = ','
 
     # Returns 0 if successful
     def conn_to_db(self):
@@ -199,9 +199,9 @@ class DBMYSQLOVERSSH(object):
 
         rt = 0
 
-        self.type  = evt['type']
+        self.type  = evt['type' ]
         self.query = evt['query']
-        self.vars  = evt['vars']
+        self.vars  = evt['vars' ]
 
         try:
             with sshtunnel.SSHTunnelForwarder((self.ssh_str['ssh_host'],self.ssh_str['ssh_port']),ssh_password=self.ssh_str['ssh_pwsd'],ssh_username=self.ssh_str['ssh_user'],remote_bind_address=(self.ssh_str['ssh_rmip'], self.ssh_str['ssh_rmpt'])) as self.tunnel:
@@ -292,7 +292,7 @@ class DBMYSQLOVERSSH(object):
             # if (type(self.vars) != list):
             #     self.vars = [self.vars,]
             try:
-                tmp = []
+                tmp    = []
                 cursor = self.db_conn.cursor()#mysql.cursors.DictCursor)
 
                 if len(self.vars) == 0 :

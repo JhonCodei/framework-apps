@@ -1,3 +1,4 @@
 pymysql
 sshtunnel
 pyzk
+xlrd

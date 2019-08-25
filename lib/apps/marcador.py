@@ -26,7 +26,6 @@ from datastore.dbutil  import DBMYSQL
 
 from apps.mksbase        import _MksBaseApp
 from statements.marcador import _SQLMarcador
-
 from dependences.zkutils import ZKUtil
 
 
@@ -82,7 +81,7 @@ class Marcador(_MksBaseApp):
             'mail_sender' :'',
             'mail_passwd' :'',
             'mail_targets':'',
-
+            #Machines
             'company-1'     :'',
             'out_fn-1'      :'',
             'ip-1'          :'',
@@ -94,15 +93,18 @@ class Marcador(_MksBaseApp):
             'end_time-1'    :'',
         }
 
-        self.callqry = _SQLMarcador()
-        # Allowable commands for this application
+        self.callqry  = _SQLMarcador()
+        self._appbase = _AppBase()
 
+        # Allowable commands for this application
         self.cmdStep = {
-                        'G': self.get_attendance  ,
-                        'C': self.clear_attendance,
-                        'L': self.live_attendance ,
-                        'R': self.reboot_machine  ,
+                        # 'G': self.get_attendance  ,
+                        # 'C': self.clear_attendance,
+                        # 'L': self.live_attendance ,
+                        # 'R': self.reboot_machine  ,
+                        'X': self.example0
                         }
+
     # Use only for configuration values that need some manipulations/checks.
     def set_config_vars(self):
 
@@ -139,8 +141,12 @@ class Marcador(_MksBaseApp):
         }
 
         return 0
+    def example0():
 
-    def get_data_test(self):
+        xx = self._appbase._set_dir_project()
+        print(xx)
+
+    def get_data_test(self):#complete
 
         ret = 1
 
@@ -151,7 +157,7 @@ class Marcador(_MksBaseApp):
 
         print(ret)
 
-    def get_attendance(self):
+    def get_attendance(self):#complete
         ret = 0
 
         zu = ZKUtil(self.log, self.ip)
@@ -165,7 +171,7 @@ class Marcador(_MksBaseApp):
 
         return ret
 
-    def clear_attendance(self):
+    def clear_attendance(self):#complete
         ret = 0
 
         print(f"clear_attendance,detail => {self.runSeq2}")

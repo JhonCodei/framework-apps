@@ -1,21 +1,20 @@
 """
  mksbase is the base class for all MKS applications.
  This program :
-    1)
+    1)ventas - use data , clean data, insert data, generate reports
     2)
 
 """
 
-__version__ = '20181113'
+__version__ = '20190825'
 
 import sys
 import os
 
+#from common.app_base import _AppBase
 from common.app_log  import get_logger
 from common.app_conf import load_app_config
 from common.app_env  import get_env_vars
-
-#import common.app_base as app_base
 
 RET_WARN = 101
 
@@ -38,7 +37,6 @@ class _MksBaseApp(object):
         self.input_dir  = os.path.join(self.data_dir, 'input'      )
 
         self.stmnt_fn = os.path.join(self.stmnt_dir, f'{self.appName}.py')
-
         self.cfg_file = os.path.join(self.config_dir, f'{self.appName}.cfg') # Can be overwritten by ENV Vars.
         self.log_name = f'{self.appName}.log'                                # Can be overwritten by ENV Vars.
         self.log = get_logger(self.log_dir, self.log_name)                   # Can be overwritten by ENV Vars.
@@ -46,7 +44,7 @@ class _MksBaseApp(object):
         self.config_vars = {}
         self.config      = {}
         self.cmdStep     = {}
-        self.runSeq      = None
+        self.runSeq      = None # set default
         self.runSeq2     = None # set default
 
     # Abstract define in child class.
@@ -65,7 +63,6 @@ class _MksBaseApp(object):
     # Abstract define in child class.
     def set_global_exe(self):
         return 0
-
 
     def print_config_vars(self):
         for k,v in self.config_vars.items():

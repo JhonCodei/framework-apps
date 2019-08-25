@@ -18,12 +18,12 @@ import utils.mathutils as mu
 
 # -------------- Platform Specific Cmd :Start
 if (sys.platform == 'win32'):
-    PING_CMD = "ping %s -n %d"
-    PING_RESP = "(0% loss)"
+    PING_CMD     = "ping %s -n %d"
+    PING_RESP    = "(0% loss)"
     PING_IDX_OFF = -1
 else:
-    PING_CMD = "ping %s -c %d"
-    PING_RESP = " 0% packet loss"
+    PING_CMD     = "ping %s -c %d"
+    PING_RESP    = " 0% packet loss"
     PING_IDX_OFF = 2
 # -------------- Platform Specific Cmd :End
 
@@ -32,7 +32,8 @@ def is_valid_ip(addr):
     try:
         socket.inet_aton(addr)
         return True
-    except socket.error: return False
+    except socket.error:
+        return False
 
 # x = name@host.com
 # Returns a list with the user and domain.
@@ -50,7 +51,7 @@ def domain_split(x):
 # addr Server Name or IP
 # no   Number of times to execute the command.
 
-def ping_server(addr, logger, txn = 5):
+def ping_server(addr, logger, txn=5):
     rv = 1
     cmd = PING_CMD % (addr, txn)
     logger.debug(f'cmd = {cmd}')
@@ -79,7 +80,7 @@ def _get_ping_per(msg, logger, txn, per_pass):
         mat = re.match(m, r)
         if mat:
             idx = resp.index(r)
-            rx = resp[idx + PING_IDX_OFF]
+            rx  = resp[idx + PING_IDX_OFF]
             logger.debug(f'idx = {idx} rx = {rx}')
             recv = su.to_int_zero(rx)
             break
@@ -106,6 +107,6 @@ def ping_server_per(addr, logger, txn=5, per_pass=100):
     rc, msg = p.run_sync(cmd,logger)
 
     if rc == 0:
-        rv = _get_ping_per(msg.decode('utf-8'), logger,  txn, per_pass)
+        rv = _get_ping_per(msg.decode('utf-8'), logger, txn, per_pass)
 
     return rv

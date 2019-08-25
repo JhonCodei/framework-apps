@@ -23,13 +23,14 @@ def file_exists(fn): return os.path.exists(fn)
 def get_file_size(fn): return os.path.getsize(fn)
 
 def open_file(fn, logger, mode='r+'):
+
     f = None
 
     try:
         f = open(fn, mode)
 
     except IOError:
-        logger.error('Error {}'.format(sys.exc_info()))
+        logger.error(f'Error {sys.exc_info()}')
 
     finally:
         return f
@@ -39,6 +40,7 @@ def close_file(f):
         f.close()
 #  Data can be a list or a string.
 def create_file(fn, data, logger):
+
     ret = 1
     try:
         f = open(fn, "w")
@@ -58,7 +60,7 @@ def create_file(fn, data, logger):
 
     except IOError:
         logger.error(f'No se pudo crear {fn}')
-        logger.debug(f'Except {sys.exc_info()}')
+        logger.debug(f'Except IOError {sys.exc_info()}')
 
     except:
         logger.error(f'Except {sys.exc_info()}')
@@ -76,13 +78,14 @@ def read_text_file(fn, logger):
             fcont = fc
 
     except FileNotFoundError:
-        logger.error('No se encontro archivo {}'.format(fn))
+        logger.error(f'No se encontro archivo {fn}')
 
     except:
-        logger.error('Error {}'.format(sys.exc_info()))
+        logger.error(f'Error {sys.exc_info()}')
 
     finally:
         return fcont
+
 # Reads a csv file and returns a list.
 def read_csv_file(fn, logger):
 
@@ -97,29 +100,28 @@ def read_csv_file(fn, logger):
         logger.error(f'No se encontro archivo {fn}')
 
     except:
-        logger.error('Error {sys.exc_info()}')
+        logger.error(f'Error {sys.exc_info()}')
 
     finally:
         return rd_list
+
 # returns a list.
-def read_file_list(fn,logger):
+def read_file_list(fn, logger):
 
     f = None
-    lines = []
+    ln = []
     try:
-        f = open(fn, 'r')
-        lines = f.read().splitlines()
+        f  = open(fn, 'r')
+        ln = f.read().splitlines()
     except FileNotFoundError:
-
         logger.error(f'Except File {fn} not found')
 
     except:
-
         logger.error(f'Except {sys.exc_info()}')
 
     finally:
         if f: close_file(f)
-        return lines
+        return ln
 
 
 #########
@@ -177,7 +179,7 @@ def read_excel_file(fn, logger, index=0):
 
     frows  = rd_indx.nrows
     fcells = rd_indx.ncols
-    
+
     rowvalue = []
 
     for r in range(frows):
