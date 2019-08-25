@@ -1,0 +1,74 @@
+23.08.2019_14:51:06 [CRITICAL] mksbase._set_args  --  running <X> fx [runSeq] - Number of arguments (2)
+23.08.2019_14:51:06 [INFO    ] app_env.get_env_vars  -- No env vars to load
+23.08.2019_14:51:06 [INFO    ] app_conf.load_app_config  -- Loading config file : D:\Projects\python\debug\config\ventas.cfg
+23.08.2019_14:51:06 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['ssh_host', 'ssh_user', 'ssh_pwsd', 'ssh_port', 'ssh_rmip', 'ssh_rmpt', 'db_host', 'db_user', 'db_pswd', 'db_name', 'db_port']
+23.08.2019_14:51:06 [DEBUG   ] app_conf.load_app_config  -- App Variables ['ssh_host', 'ssh_user', 'ssh_pwsd', 'ssh_port', 'ssh_rmip', 'ssh_rmpt', 'db_host', 'db_user', 'db_pswd', 'db_name', 'db_port']
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_host --  192.168.1.220
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_user --  ubuntu
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_pwsd --  lenovo19
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_port --  22
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_rmip --  127.0.0.1
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_rmpt --  3306
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_host --  127.0.0.1
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_user --  root
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_pswd --  lenovo19
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_name --  fingerprint
+23.08.2019_14:51:06 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_port --  3306
+23.08.2019_14:51:06 [ERROR   ] mksbase.set_statement_file  --  statements file no exist, name:D:\Projects\python\debug\statements\ventas.py
+23.08.2019_14:51:06 [INFO    ] mksbase._execSteps  -- runStep = X
+23.08.2019_14:51:06 [INFO    ] strutils.float_to_full_date  --  set vars => 43678.0
+23.08.2019_14:51:06 [ERROR   ] mksbase._execSteps  -- X:example2
+23.08.2019_14:51:06 [ERROR   ] mksbase._execSteps  -- Except (<class 'AttributeError'>, AttributeError("type object 'datetime.datetime' has no attribute 'datetime'"), <traceback object at 0x038745A8>)
+23.08.2019_14:51:06 [ERROR   ] mksbase.main  -- execSteps rc = 1
+23.08.2019_14:53:36 [CRITICAL] mksbase._set_args  --  running <X> fx [runSeq] - Number of arguments (2)
+23.08.2019_14:53:36 [INFO    ] app_env.get_env_vars  -- No env vars to load
+23.08.2019_14:53:36 [INFO    ] app_conf.load_app_config  -- Loading config file : D:\Projects\python\debug\config\ventas.cfg
+23.08.2019_14:53:36 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['ssh_host', 'ssh_user', 'ssh_pwsd', 'ssh_port', 'ssh_rmip', 'ssh_rmpt', 'db_host', 'db_user', 'db_pswd', 'db_name', 'db_port']
+23.08.2019_14:53:36 [DEBUG   ] app_conf.load_app_config  -- App Variables ['ssh_host', 'ssh_user', 'ssh_pwsd', 'ssh_port', 'ssh_rmip', 'ssh_rmpt', 'db_host', 'db_user', 'db_pswd', 'db_name', 'db_port']
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_host --  192.168.1.220
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_user --  ubuntu
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_pwsd --  lenovo19
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_port --  22
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_rmip --  127.0.0.1
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_rmpt --  3306
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_host --  127.0.0.1
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_user --  root
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_pswd --  lenovo19
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_name --  fingerprint
+23.08.2019_14:53:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_port --  3306
+23.08.2019_14:53:36 [ERROR   ] mksbase.set_statement_file  --  statements file no exist, name:D:\Projects\python\debug\statements\ventas.py
+23.08.2019_14:53:36 [INFO    ] mksbase._execSteps  -- runStep = X
+23.08.2019_14:53:36 [INFO    ] strutils.float_to_full_date  --  set vars => 43678.0
+23.08.2019_14:53:36 [ERROR   ] strutils.float_to_full_date  -- TypeError  => unsupported type for timedelta days component: str
+23.08.2019_14:53:36 [INFO    ] strutils.float_to_full_date  --  set vars => 43679.0
+23.08.2019_14:53:36 [ERROR   ] strutils.float_to_full_date  -- TypeError  => unsupported type for timedelta days component: str
+23.08.2019_14:53:36 [INFO    ] strutils.float_to_full_date  --  set vars => 43680.0
+23.08.2019_14:53:36 [ERROR   ] strutils.float_to_full_date  -- TypeError  => unsupported type for timedelta days component: str
+23.08.2019_14:53:36 [INFO    ] mksbase._execSteps  -- X:example2()	rc	= None
+23.08.2019_14:53:36 [ERROR   ] mksbase.main  -- execSteps rc = None
+23.08.2019_14:54:21 [CRITICAL] mksbase._set_args  --  running <X> fx [runSeq] - Number of arguments (2)
+23.08.2019_14:54:21 [INFO    ] app_env.get_env_vars  -- No env vars to load
+23.08.2019_14:54:21 [INFO    ] app_conf.load_app_config  -- Loading config file : D:\Projects\python\debug\config\ventas.cfg
+23.08.2019_14:54:21 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['ssh_host', 'ssh_user', 'ssh_pwsd', 'ssh_port', 'ssh_rmip', 'ssh_rmpt', 'db_host', 'db_user', 'db_pswd', 'db_name', 'db_port']
+23.08.2019_14:54:21 [DEBUG   ] app_conf.load_app_config  -- App Variables ['ssh_host', 'ssh_user', 'ssh_pwsd', 'ssh_port', 'ssh_rmip', 'ssh_rmpt', 'db_host', 'db_user', 'db_pswd', 'db_name', 'db_port']
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_host --  192.168.1.220
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_user --  ubuntu
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_pwsd --  lenovo19
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_port --  22
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_rmip --  127.0.0.1
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = ssh_rmpt --  3306
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_host --  127.0.0.1
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_user --  root
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_pswd --  lenovo19
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_name --  fingerprint
+23.08.2019_14:54:21 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = db_port --  3306
+23.08.2019_14:54:21 [ERROR   ] mksbase.set_statement_file  --  statements file no exist, name:D:\Projects\python\debug\statements\ventas.py
+23.08.2019_14:54:21 [INFO    ] mksbase._execSteps  -- runStep = X
+23.08.2019_14:54:21 [INFO    ] strutils.float_to_full_date  --  set vars => 43678.0
+23.08.2019_14:54:21 [INFO    ] strutils.float_to_full_date  --  set time => 2019-08-03 00:00:00
+23.08.2019_14:54:21 [INFO    ] strutils.float_to_full_date  --  set vars => 43679.0
+23.08.2019_14:54:21 [INFO    ] strutils.float_to_full_date  --  set time => 2019-08-04 00:00:00
+23.08.2019_14:54:21 [INFO    ] strutils.float_to_full_date  --  set vars => 43680.0
+23.08.2019_14:54:21 [INFO    ] strutils.float_to_full_date  --  set time => 2019-08-05 00:00:00
+23.08.2019_14:54:21 [INFO    ] mksbase._execSteps  -- X:example2()	rc	= None
+23.08.2019_14:54:21 [ERROR   ] mksbase.main  -- execSteps rc = None

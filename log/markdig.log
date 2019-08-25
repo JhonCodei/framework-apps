@@ -1,0 +1,383 @@
+21.11.2018_15:32:18 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_15:32:18 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_15:32:18 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_Path']
+21.11.2018_15:32:18 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data']
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_15:32:18 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_Path --  "D:\Projects\C#\MarcadoresZKTEKO\C#\files"
+21.11.2018_15:32:18 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:32:18 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_15:32:18 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_15:32:18 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_15:32:25 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_15:32:25 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_15:32:25 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_15:32:25 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:32:25 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_15:32:25 [ERROR   ] mark_dig._get_data_text  -- Could not open C:\apps\mks_apps\data\input\data.log or has 0 records
+21.11.2018_15:32:25 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 1
+21.11.2018_15:32:25 [DEBUG   ] mark_dig.build_prn  -- outfile "D:\Projects\C#\MarcadoresZKTEKO\C#\files"/
+21.11.2018_15:32:25 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:32:25 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:32:25 [ERROR   ] fileutils.create_file  -- No se pudo crear "D:\Projects\C#\MarcadoresZKTEKO\C#\files"/
+21.11.2018_15:32:25 [DEBUG   ] fileutils.create_file  -- Except (<class 'OSError'>, OSError(22, 'Invalid argument'), <traceback object at 0x03BDB5F8>)
+21.11.2018_15:32:25 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 1
+21.11.2018_15:32:25 [ERROR   ] mksbase.main  -- execSteps rc = 1
+21.11.2018_15:33:05 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_15:33:05 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_15:33:05 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_Path']
+21.11.2018_15:33:05 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data']
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_15:33:05 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_Path --  "D:\Projects\C#\MarcadoresZKTEKO\C#\files\"
+21.11.2018_15:33:05 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:05 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_15:33:05 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_15:33:05 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_15:33:11 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_15:33:11 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_15:33:11 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_15:33:11 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:11 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_15:33:11 [ERROR   ] mark_dig._get_data_text  -- Could not open C:\apps\mks_apps\data\input\data.log or has 0 records
+21.11.2018_15:33:11 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 1
+21.11.2018_15:33:11 [DEBUG   ] mark_dig.build_prn  -- outfile "D:\Projects\C#\MarcadoresZKTEKO\C#\files\"
+21.11.2018_15:33:11 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:11 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:11 [ERROR   ] fileutils.create_file  -- No se pudo crear "D:\Projects\C#\MarcadoresZKTEKO\C#\files\"
+21.11.2018_15:33:11 [DEBUG   ] fileutils.create_file  -- Except (<class 'OSError'>, OSError(22, 'Invalid argument'), <traceback object at 0x03CDA580>)
+21.11.2018_15:33:11 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 1
+21.11.2018_15:33:11 [ERROR   ] mksbase.main  -- execSteps rc = 1
+21.11.2018_15:33:28 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_15:33:28 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_15:33:28 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_Path']
+21.11.2018_15:33:28 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data']
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_15:33:28 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\
+21.11.2018_15:33:28 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:28 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_15:33:28 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_15:33:28 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_15:33:34 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_15:33:34 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_15:33:34 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_15:33:34 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:34 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_15:33:34 [ERROR   ] mark_dig._get_data_text  -- Could not open C:\apps\mks_apps\data\input\data.log or has 0 records
+21.11.2018_15:33:34 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 1
+21.11.2018_15:33:34 [DEBUG   ] mark_dig.build_prn  -- outfile D:\Projects\C#\MarcadoresZKTEKO\C#\files\
+21.11.2018_15:33:34 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:34 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:33:34 [ERROR   ] fileutils.create_file  -- No purede crear archivo D:\Projects\C#\MarcadoresZKTEKO\C#\files\
+21.11.2018_15:33:34 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 1
+21.11.2018_15:33:34 [ERROR   ] mksbase.main  -- execSteps rc = 1
+21.11.2018_15:36:41 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_15:36:41 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_15:36:41 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_Path']
+21.11.2018_15:36:41 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data']
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_15:36:41 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_Path --  
+21.11.2018_15:36:41 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:36:41 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_15:36:41 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_15:36:41 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_15:36:47 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_15:36:47 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_15:36:47 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_15:36:47 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:36:47 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_15:36:47 [ERROR   ] mark_dig._get_data_text  -- Could not open C:\apps\mks_apps\data\input\data.log or has 0 records
+21.11.2018_15:36:47 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 1
+21.11.2018_15:36:47 [DEBUG   ] mark_dig.build_prn  -- outfile C:\apps\mks_apps\data\output\DNIMKS.prn
+21.11.2018_15:36:47 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:36:47 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:36:47 [INFO    ] mark_dig.build_prn  -- Wrote File C:\apps\mks_apps\data\output\DNIMKS.prn with 2 rows
+21.11.2018_15:36:47 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 0
+21.11.2018_15:36:47 [INFO    ] mksbase.main  -- Completed running exec_steps rc = 0
+21.11.2018_15:38:47 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_15:38:47 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_15:38:47 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_15:38:47 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data']
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_15:38:47 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_15:38:47 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:38:47 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_15:38:47 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_15:38:47 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_15:38:54 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_15:38:54 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_15:38:54 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_15:38:54 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:38:54 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_15:38:54 [ERROR   ] mark_dig._get_data_text  -- Could not open C:\apps\mks_apps\data\input\data.log or has 0 records
+21.11.2018_15:38:54 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 1
+21.11.2018_15:38:54 [DEBUG   ] mark_dig.build_prn  -- outfile D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_15:38:54 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:38:54 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:38:54 [INFO    ] mark_dig.build_prn  -- Wrote File D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn with 2 rows
+21.11.2018_15:38:54 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 0
+21.11.2018_15:38:54 [INFO    ] mksbase.main  -- Completed running exec_steps rc = 0
+21.11.2018_15:42:40 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_15:42:40 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_15:42:40 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_15:42:40 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_15:42:40 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_15:42:40 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:42:40 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_15:42:40 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_15:42:40 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_15:42:47 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_15:42:47 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_15:42:47 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_15:42:47 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:42:47 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_15:42:47 [ERROR   ] mark_dig._get_data_text  -- Could not open C:\apps\mks_apps\data\input\data.log or has 0 records
+21.11.2018_15:42:47 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 1
+21.11.2018_15:42:47 [DEBUG   ] mark_dig.build_prn  -- outfile D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_15:42:47 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:42:47 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_15:42:47 [INFO    ] mark_dig.build_prn  -- Wrote File D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn with 2 rows
+21.11.2018_15:42:47 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 0
+21.11.2018_15:42:47 [INFO    ] mksbase.main  -- Completed running exec_steps rc = 0
+21.11.2018_16:00:19 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_16:00:19 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_16:00:19 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:00:19 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_16:00:19 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:00:19 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:00:19 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_16:00:19 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_16:00:19 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_16:00:28 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_16:00:28 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_16:00:28 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_16:00:28 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:00:28 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_16:00:28 [INFO    ] mark_dig._get_data_text  -- file = C:\apps\mks_apps\data\input\data.log  2 recs 
+21.11.2018_16:00:28 [INFO    ] dbutil.exe_qry  -- rc is 2
+21.11.2018_16:00:28 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:00:28 [INFO    ] mark_dig.ins_mark_sql  -- recs read from file = 2  insert into DB = 2 
+21.11.2018_16:00:28 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 0
+21.11.2018_16:00:28 [DEBUG   ] mark_dig.build_prn  -- outfile D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:00:28 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:00:28 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:00:28 [INFO    ] mark_dig.build_prn  -- Wrote File D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn with 4 rows
+21.11.2018_16:00:28 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 0
+21.11.2018_16:00:28 [INFO    ] mksbase.main  -- Completed running exec_steps rc = 0
+21.11.2018_16:03:36 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_16:03:36 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_16:03:36 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:03:36 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  60
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_16:03:36 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:03:36 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:03:36 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_16:03:36 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_16:03:36 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_16:04:01 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_16:04:01 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_16:04:01 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_16:04:01 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:04:01 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_16:04:01 [INFO    ] mark_dig._get_data_text  -- file = C:\apps\mks_apps\data\input\data.log  4 recs 
+21.11.2018_16:04:01 [INFO    ] dbutil.exe_qry  -- rc is 4
+21.11.2018_16:04:01 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:04:01 [INFO    ] mark_dig.ins_mark_sql  -- recs read from file = 4  insert into DB = 4 
+21.11.2018_16:04:01 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 0
+21.11.2018_16:04:01 [DEBUG   ] mark_dig.build_prn  -- outfile D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:04:01 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:04:01 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:04:01 [INFO    ] mark_dig.build_prn  -- Wrote File D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn with 8 rows
+21.11.2018_16:04:01 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 0
+21.11.2018_16:04:01 [INFO    ] mksbase.main  -- Completed running exec_steps rc = 0
+21.11.2018_16:55:07 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_16:55:07 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_16:55:07 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:55:07 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  reboot.exe
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  80
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_16:55:07 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:55:07 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:55:07 [INFO    ] mksbase._execSteps  -- runStep = DAF
+21.11.2018_16:55:07 [DEBUG   ] netutils.ping_server_per  -- cmd = {cmd}
+21.11.2018_16:55:07 [DEBUG   ] process.run_sync  -- cmd ping 192.168.1.237 -n 3
+21.11.2018_16:55:09 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'\r\nHaciendo ping a 192.168.1.237 con 32 bytes de datos:\r\nRespuesta desde 192.168.1.237: bytes=32 tiempo=3ms TTL=255\r\nRespuesta desde 192.168.1.237: bytes=32 tiempo=1ms TTL=255\r\nRespuesta desde 192.168.1.237: bytes=32 tiempo=4ms TTL=255\r\n\r\nEstad\xa1sticas de ping para 192.168.1.237:\r\n    Paquetes: enviados = 3, recibidos = 3, perdidos = 0\r\n    (0% perdidos),\r\nTiempos aproximados de ida y vuelta en milisegundos:\r\n    M\xa1nimo = 1ms, M\xa0ximo = 4ms, Media = 2ms\r\n' ======== 
+21.11.2018_16:58:00 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_16:58:00 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_16:58:00 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:58:00 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  reboot.exe
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  80
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_16:58:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:58:00 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:58:00 [INFO    ] mksbase._execSteps  -- runStep = AFE
+21.11.2018_16:58:00 [INFO    ] mark_dig._write_config_file  -- Wrote file C:\apps\mks_apps\script\remote.cfg
+21.11.2018_16:58:00 [DEBUG   ] process.run_sync  -- cmd C:\apps\mks_apps\script\get_data.exe
+21.11.2018_16:58:09 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'' ======== 
+21.11.2018_16:58:09 [INFO    ] mark_dig.get_data  -- ret = 0 for ip = 192.168.1.237 machine = 1
+21.11.2018_16:58:09 [INFO    ] mksbase._execSteps  -- A:get_data()	rc	= 0
+21.11.2018_16:58:09 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:58:09 [DEBUG   ] mark_dig._get_data_text  -- inpfile C:\apps\mks_apps\data\input\data.log
+21.11.2018_16:58:09 [INFO    ] mark_dig._get_data_text  -- file = C:\apps\mks_apps\data\input\data.log  4 recs 
+21.11.2018_16:58:09 [INFO    ] dbutil.exe_qry  -- rc is 4
+21.11.2018_16:58:09 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:58:09 [INFO    ] mark_dig.ins_mark_sql  -- recs read from file = 4  insert into DB = 4 
+21.11.2018_16:58:09 [INFO    ] mksbase._execSteps  -- F:ins_mark_sql()	rc	= 0
+21.11.2018_16:58:09 [DEBUG   ] mark_dig.build_prn  -- outfile D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_16:58:09 [DEBUG   ] dbutil.conn_to_db  -- Connecting to C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:58:09 [DEBUG   ] dbutil.close_db_conn  -- Closing Conn C:\apps\mks_apps\data\digmark.db
+21.11.2018_16:58:09 [INFO    ] mark_dig.build_prn  -- Wrote File D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn with 12 rows
+21.11.2018_16:58:09 [INFO    ] mksbase._execSteps  -- E:build_prn()	rc	= 0
+21.11.2018_16:58:09 [INFO    ] mksbase.main  -- Completed running exec_steps rc = 0
+21.11.2018_17:01:00 [INFO    ] app_env.get_env_vars  -- No env vars to load
+21.11.2018_17:01:00 [INFO    ] app_conf.load_app_config  -- Loading config file : C:\apps\mks_apps\config\markdig.cfg
+21.11.2018_17:01:00 [DEBUG   ] app_conf.load_app_config  -- Config File Variables ['IPs', 'Port', 'Machines', 'Sleep_Time', 'Max_Tries', 'Txn_Times', 'Reboot_Exe', 'Get_Data_Exe', 'Rem_Config_File', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_17:01:00 [DEBUG   ] app_conf.load_app_config  -- App Variables ['IPs', 'Port', 'Machines', 'Max_Tries', 'Txn_Times', 'Sleep_Time', 'Reboot_Exe', 'Get_Data_Exe', 'Perc_Ping_Pass', 'Db_Name', 'Inp_Mark_Data', 'Out_Mark_Data', 'Out_Base_File_Path']
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = IPs --  192.168.1.237
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Port --  4370
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Machines --  1
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Sleep_Time --  5
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Max_Tries --  3
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Txn_Times --  3
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Reboot_Exe --  beep.exe
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Get_Data_Exe --  get_data.exe
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Rem_Config_File --  remote.cfg
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Perc_Ping_Pass --  80
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Db_Name --  digmark.db
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Inp_Mark_Data --  data.log
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Mark_Data --  DNIMKS.prn
+21.11.2018_17:01:00 [DEBUG   ] mksbase.print_config_vars  -- self.config_vars = Out_Base_File_Path --  D:\Projects\C#\MarcadoresZKTEKO\C#\files\DNIMKS.prn
+21.11.2018_17:01:00 [DEBUG   ] mark_dig.set_config_vars  -- self.db_name = C:\apps\mks_apps\data\digmark.db
+21.11.2018_17:01:00 [INFO    ] mksbase._execSteps  -- runStep = DAF
+21.11.2018_17:01:00 [DEBUG   ] netutils.ping_server_per  -- cmd = {cmd}
+21.11.2018_17:01:00 [DEBUG   ] process.run_sync  -- cmd ping 192.168.1.237 -n 3
+21.11.2018_17:01:02 [DEBUG   ] process.run_sync  -- rv=0 p.rc=0
+p.msg ======= b'\r\nHaciendo ping a 192.168.1.237 con 32 bytes de datos:\r\nRespuesta desde 192.168.1.237: bytes=32 tiempo=1ms TTL=255\r\nRespuesta desde 192.168.1.237: bytes=32 tiempo=1ms TTL=255\r\nRespuesta desde 192.168.1.237: bytes=32 tiempo=1ms TTL=255\r\n\r\nEstad\xa1sticas de ping para 192.168.1.237:\r\n    Paquetes: enviados = 3, recibidos = 3, perdidos = 0\r\n    (0% perdidos),\r\nTiempos aproximados de ida y vuelta en milisegundos:\r\n    M\xa1nimo = 1ms, M\xa0ximo = 1ms, Media = 1ms\r\n' ======== 
