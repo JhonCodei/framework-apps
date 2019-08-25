@@ -26,7 +26,7 @@ from datastore.dbutil  import DBMYSQL
 
 from apps.mksbase        import _MksBaseApp
 from statements.marcador import _SQLMarcador
-from dependences.zkutils import ZKUtil
+from sources.zkutils     import ZKUtil
 
 
 current_date = datetime.now().strftime('%Y%m%d')
@@ -94,7 +94,6 @@ class Marcador(_MksBaseApp):
         }
 
         self.callqry  = _SQLMarcador()
-        self._appbase = _AppBase()
 
         # Allowable commands for this application
         self.cmdStep = {
@@ -141,10 +140,10 @@ class Marcador(_MksBaseApp):
         }
 
         return 0
-    def example0():
+    def example0(self):
 
         xx = self._appbase._set_dir_project()
-        print(xx)
+        print(f"mio={xx}\n eo={self.base_dir}")
 
     def get_data_test(self):#complete
 
